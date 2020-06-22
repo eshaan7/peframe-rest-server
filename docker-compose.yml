@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  peframe:
+    image: eshaan7/peframe-rest-server
+    container_name: peframe-rest-api
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      - FLASK_PORT=4000
+      - WORKERS=1
+      - LOG_LEVEL=INFO
+      - LOG_PATH=/var/log/peframe_rest

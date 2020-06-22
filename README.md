@@ -12,19 +12,10 @@ docker run -p "4000:4000" -e "WORKERS=1" -e "LOG_LEVEL=INFO" -ti eshaan7/peframe
 
 ## Docker-Compose
 
-```
-version: '3'
+There's a `docker-compose.yml` file available in this repo.
 
-services:
-  peframe:
-    image: eshaan7/peframe-rest-server
-    container_name: peframe-rest-api
-    restart: unless-stopped
-    ports:
-      - "4000:4000"
-    environment:
-      - WORKERS=1
-      - LOG_LEVEL=INFO
+```bash
+$ docker-compose up
 ```
 
 ## Making calls to API
